@@ -1,0 +1,534 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
+
+@mixin text-decoration ($family, $weight, $size, $color) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin photo ($source , $width, $height) {
+    background-image: $source;
+    width: $width;
+    height: $height;
+}
+
+@media screen and (min-width: 1201px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        background: url(../images/people.png) center no-repeat;
+        background-size: cover;
+        padding: 41px 291px 235px 248px;
+
+        nav {
+            width: 100%;
+        }
+
+        .column {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .logo {
+            @include text-decoration('Montserrat', 700, 20px, white);
+            padding-top: 7px;
+        }
+
+        button {
+            @include text-decoration('Montserrat', 400, 14px, white);
+            background-color: transparent;
+            border-radius: 25px;
+            border: none;
+        }
+
+        .logo__but {
+            padding-right: 16px;
+        }
+
+        .logo__but1 {
+            width: 90px;
+            height: 35px;
+            border: 1px solid white;
+            line-height: 17px;
+        }
+
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 620px;
+
+        .desc__share {
+            @include text-decoration('Montserrat', 700, 52px, white);
+            width: 570px;
+            height: 126px;
+            text-align: center;
+            line-height: 63px;
+            padding: 13px 0px 0px 43px;
+        }
+
+        .desc__find {
+            @include text-decoration('Roboto', 300, 24px, white);
+            width: 472px;
+            height: 100px;
+            text-align: center;
+            padding: 41px 0px 0px 43px;
+        }
+
+        .desc__button {
+            height: 124px;
+            text-align: center;
+            padding-left: 44px;
+
+            .desc__red {
+                @include text-decoration('Montserrat', 700, 14px, white);
+                background-color: #FF4E50;
+                border-radius: 25px;
+                width: 225px;
+                height: 40px;
+                border: none;
+            }
+
+        }
+    }
+
+    .nine {
+        width: 79%;
+        max-width:940px ;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        background: url(../images/people.png) center no-repeat;
+        background-size: cover;
+        padding: 46px 149px 235px 149px;
+
+        nav {
+            width: 100%;
+        }
+
+        .column {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    .dream {
+        @include text-decoration('Montserrat', 700, 22px, black);
+        text-align: center;
+        padding-top: 94px;
+        padding-bottom: 35px;
+    }
+
+    .line {
+        .line__photo1 {
+            @include photo(url(../images/dream1.png), 236px, 400px);
+            padding: 0px 20px 16px 20px;
+
+            .line__sed {
+                line-height: 14px;
+            }
+        }
+
+        .line__photo1_nomargin {
+            margin: 0px;
+            @include photo(url(../images/dream3.png), 236px, 400px);
+        }
+
+        .line__photo1_photo2 {
+            @include photo(url(../images/dream2.png), 236px, 400px);
+        }
+    }
+
+    .dream1 {
+        @include text-decoration('Montserrat', 700, 22px, black);
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+    .avatars {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .avatar {
+            width: 35%;
+        }
+    }
+
+    .nine {
+        width: 748px;
+
+        .nine__sport {
+            @include photo(url(../images/Sport.png), 236px, 310px);
+        }
+
+        .nine__sport_wellness {
+            @include photo(url(../images/wellness.png), 236px, 310px);
+            margin-left: 20px;
+        }
+
+        .nine__sport_extreme {
+            @include photo(url(../images/extreme.png), 236px, 310px);
+        }
+
+        .nine__sport_games {
+            @include photo(url(../images/games.png), 236px, 310px);
+            margin: 20px 20px 20px 0;
+        }
+
+        .nine__sport_culture {
+            @include photo(url(../images/culture.png), 492px, 310px);
+        }
+
+        .nine__sport_enjomet {
+            @include photo(url(../images/enjomet.png), 492px, 310px);
+        }
+
+        .nine__sport_travelling {
+            @include photo(url(../images/travelling.png), 236px, 310px);
+            margin-left: 20px;
+        }
+    }
+
+    footer {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .four {
+        width: 24%;
+        padding-left: 60px;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        width: 100%;
+        height: 540px;
+        background: url(../images/people.png) center no-repeat;
+        background-size: cover;
+        padding: 41px 24px 153px 24px;
+
+        nav {
+            width: 100%;
+            text-align: center;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-content: center;
+            height: 150px;
+        }
+
+        .logo {
+            @include text-decoration('Montserrat', 700, 20px, white);
+            padding-top: 7px;
+        }
+
+        button {
+            @include text-decoration('Montserrat', 400, 14px, white);
+            background-color: transparent;
+            border-radius: 25px;
+            border: none;
+        }
+
+        .logo__but {
+            padding-right: 16px;
+        }
+
+        .logo__but1 {
+            width: 90px;
+            height: 35px;
+            border: 1px solid white;
+            line-height: 17px;
+        }
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 320px;
+
+        .desc__share {
+            @include text-decoration('Montserrat', 700, 30px, white);
+            width: 370px;
+            height: 116px;
+            text-align: center;
+            line-height: 37px;
+            padding: 28px 0px 0px 0px;
+        }
+
+        .desc__find {
+            @include text-decoration('Roboto', 300, 24px, white);
+            width: 316px;
+            height: 100px;
+            text-align: center;
+            padding: 0px;
+            line-height: 25px;
+        }
+
+        .desc__button {
+            height: 82px;
+            text-align: center;
+            padding-left: 0px;
+
+            .desc__red {
+                @include text-decoration('Montserrat', 700, 14px, white);
+                background-color: #FF4E50;
+                border-radius: 25px;
+                width: 225px;
+                height: 40px;
+                border: none;
+            }
+
+        }
+    }
+
+    .dream {
+        @include text-decoration('Montserrat', 700, 22px, black);
+        text-align: center;
+        padding-top: 34px;
+        padding-bottom: 15px;
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 632px;
+        justify-content: center;
+        align-items: center;
+
+        .line__photo1 {
+            @include photo(url(../images/dreamsmall1.png), 300px, 240px);
+            margin-right: 0px;
+            margin-bottom: 10px;
+            padding: 0px 30px 16px 20px;
+
+            .line__sed {
+                line-height: 14px;
+            }
+        }
+
+        .line__photo1_nomargin {
+            margin: 0px;
+            @include photo(url(../images/dreamsmall3.png), 300px, 240px);
+        }
+
+        .line__photo1_photo2 {
+            @include photo(url(../images/dreamsmall2.png), 300px, 240px);
+        }
+    }
+
+    .dream1 {
+        @include text-decoration('Montserrat', 700, 22px, black);
+        text-align: center;
+        padding: 35px 64px 14px 64px;
+    }
+
+    .avatars {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .avatar {
+            width: 100%;
+            height: 210px;
+        }
+    }
+
+    .button {
+        padding-top: 30px;
+    }
+
+    .dream__padding {
+        padding: 30px 50px 30px 50px;
+    }
+
+    .nine {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        .nine__sport {
+            @include photo(url(../images/Object.png), 300px, 120px);
+            margin-bottom: 20px;
+        }
+
+        .nine__sporttext {
+            @include text-decoration('Montserrat', 700, 22px, white);
+            text-align: center;
+        }
+
+        .nine__sport_wellness {
+            @include photo(url(../images/wellnesssmall.png), 300px, 120px);
+            margin-left: 0px;
+        }
+
+        .nine__sport_extreme {
+            @include photo(url(../images/Extremesmall.png), 300px, 120px);
+            margin-left: 0px;
+            padding: 36px;
+        }
+
+        .nine__sport_games {
+            @include photo(url(../images/gamessmall.png), 300px, 120px);
+            margin: 0px 0px 20px 0;
+        }
+
+        .nine__sport_culture {
+            @include photo(url(../images/Culturesmall.png), 300px, 120px);
+        }
+
+        .nine__sport_enjomet {
+            @include photo(url(../images/enjometsnall.png), 300px, 120px);
+        }
+
+        .nine__sport_travelling {
+            @include photo(url(../images/travellingsmall.png), 300px, 120px);
+            margin-left: 0px;
+        }
+    }
+
+    .d-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .greeting {
+            @include text-decoration('Roboto', 300, 18px, black);
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        form {
+            margin: 0 auto;
+
+            input {
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+        input::placeholder {
+            @include text-decoration('Roboto', 300, 14px, #999999);
+            padding: 14px 0px 10px 14px;
+        }
+
+        .search {
+            @include text-decoration('Montserrat', 700, 14px, white);
+            width: 172px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: #FF4E50;
+            border: none;
+        }
+    }
+
+    hr {
+        margin-top: 40px;
+        margin-bottom: 21px;
+    }
+
+    footer {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .one {
+        width: 125px;
+
+        .dreamshare {
+            @include text-decoration('Montserrat', 400, 16px, #FF4E50);
+
+        }
+    }
+
+    .two {
+        width: 200px;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+
+            li:first-child {
+                @include text-decoration('Montserrat', 700, 14px, #444444);
+                line-height: 32px;
+                width: 200px;
+                text-align: center;
+            }
+
+            li {
+                @include text-decoration('Roboto', 300, 14px, #999999);
+                line-height: 26px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .three {
+        width: 25%;
+
+        .partner {
+            @include text-decoration('Montserrat', 700, 14px, #444444);
+            line-height: 32px;
+        }
+    }
+
+    .four {
+        width: 125px;
+        padding-left: 0px;
+        padding-bottom: 22px;
+
+        .design {
+            @include text-decoration('Montserrat', 700, 10px, #CCCCCC);
+            width: 110px;
+            height: 24px;
+            padding-left: 31px;
+        }
+    }
+}
